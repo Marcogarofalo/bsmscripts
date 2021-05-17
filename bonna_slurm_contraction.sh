@@ -260,14 +260,14 @@ else
 	#echo "#SBATCH --partition=skl_usr_prod " >> $new_folder/job.templ
 	#echo "#SBATCH --account=INF21_lqcd123" >> $new_folder/job.templ
 	echo "#SBATCH -N4 -n128 --mem=32000 " >> $new_folder/job.templ            
-	echo "#SBATCH --time=00:30:00       " >> $new_folder/job.templ
+	echo "#SBATCH --time=03:00:00       " >> $new_folder/job.templ
 fi
 
 #echo "#SBATCH --output job.out " >> $new_folder/job.templ
 #echo "#SBATCH --error job.e     " >> $new_folder/job.templ
 echo >> $new_folder/job.templ
 
-echo "efile=/home/mgarofalo/tmLQCD_BSM/build/contractions_BSM" >> $new_folder/job.templ
+echo "efile=/home/mgarofalo/tmLQCD/build/contractions_BSM" >> $new_folder/job.templ
 #echo "efile=/p/scratch/chbn28/project/BSM/contractions_BSM" >> $new_folder/job.templ
 echo >> $new_folder/job.templ
 
@@ -285,7 +285,7 @@ echo >> $new_folder/job.templ
 echo "date > eta_"$etam"_M02_"$M02_decimal"_mu03_"$mu03_decimal"_L"$L"_rho_"$rho".log" >> $new_folder/job.templ
 echo >> $new_folder/job.templ
 
-echo "srun    \${efile} -f contractions.input  -v | tee -a eta_"$etam"_M02_"$M02_decimal"_mu03_"$mu03_decimal"_L"$L"_rho_"$rho".log" >> $new_folder/job.templ
+echo "mpirun    \${efile} -f contractions.input  -v | tee -a eta_"$etam"_M02_"$M02_decimal"_mu03_"$mu03_decimal"_L"$L"_rho_"$rho".log" >> $new_folder/job.templ
 
 echo >> $new_folder/job.templ
 
@@ -387,7 +387,7 @@ echo "EndOperator" >>$new_folder/contractions.templ
 ###################
 cd $new_folder
 csh RUN_create_dirs_pass_G_and_S.csh
-#csh RUN_qsub_pass_G_and_S.csh 
+csh RUN_qsub_pass_G_and_S.csh 
 cd $here
 
 

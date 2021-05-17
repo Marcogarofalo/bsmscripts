@@ -1,7 +1,8 @@
 #!/bin/bash
 L=20
 T=40
-
+here=`pwd`
+cd ..
 for f in `ls | grep eta | grep -v test`
 do
 
@@ -72,7 +73,7 @@ then
 			for scalar in $scalars
 			do
 #				echo "processing scalar "$f"/"$conf"/"$run"/$scalar "
-                               ./v0 -i  "$f"/"$conf"/"$run"/$scalar  -o niente -L $L -T $T
+                                $here/v0 -i  "$f"/"$conf"/"$run"/$scalar  -o niente -L $L -T $T
 				cat vev | awk '{print $1"   "166116116}'  >> data_marco/$f/data/vev
                 		cat phit  | awk '{print $1"   "166116116}' >> data_marco/$f/data/phit                                
                                 
@@ -87,4 +88,4 @@ done
 done
 
 
-
+cd $here
