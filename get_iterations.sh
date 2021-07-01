@@ -1,4 +1,5 @@
 #!/bin/bash
+make
 echo eta m0 mu rho  csw  CG.AVE.iter   error   res2   err > table.txt
 for f in `ls | grep eta`
 do
