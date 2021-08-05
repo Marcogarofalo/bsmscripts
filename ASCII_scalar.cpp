@@ -48,10 +48,9 @@ int main (int argc, char** argv) {
   double weight = phi_field[4 * V];  
   
   for (int i=0;i<4*V;i++){
-      phi_field[i]=norm1*phi_field[i];  
+      printf("i=%d  com=%d x=%d phi=%g\n",i , i%4, i/4, phi_field[i]);
   }
   
-  write_phi_field(4 * V + 1, output_filename, phi_field);
 
 
 

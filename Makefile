@@ -1,4 +1,4 @@
-All: mean_and_err v0 norm_scalar
+All: mean_and_err v0 norm_scalar ASCII_scalar
 
 
 mean_and_err: mean_and_err.cpp
@@ -9,3 +9,6 @@ v0: v0.cpp
 
 norm_scalar: norm_scalar.cpp
 	g++ norm_scalar.cpp -o norm_scalar
+
+ASCII_scalar: ASCII_scalar.cpp
+	g++ ASCII_scalar.cpp -o ASCII_scalar
