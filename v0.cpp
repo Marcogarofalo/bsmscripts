@@ -150,7 +150,7 @@ void read_phi_field (const int size, char* filename, double *in) {
      "rb");
   if (f) {
     fread (in, sizeof(double), size, f);
-    printf ("\nReading phi field configuration was successful!\n");
+  //  printf ("\nReading phi field configuration was successful!\n");
     fclose(f);
   }
   else{

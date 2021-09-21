@@ -2,49 +2,50 @@
 L=20
 T=40
 #etas="-1.0983 -1.1375 -1.2944"
-#etas="-1.0983"
+#etas="-1.0983 -1.2944"
+etas="-1.4063"
 #etas="-1.1375"
 #etas="-1.2944"
-etas="0.0 -0.1 -1.0 "
+#etas="0.0 -0.1 -1.0 "
 #etas="-1.0"
 #M02s=" -0.8 -0.4 0 0.4  "
 #M02s="-1.2 -1.0 -0.8 -0.6 -0.4 -0.2 0 0.2 0.4 0.6"
 #M02s=" -0.029604 -0.024604  0.010396 "
-#M02s=" -0.010396  "
-M02s=" 0.0  "
-#M02s=" -0.040000  "
+#M02s=" -0.010396"
+#M02s="  -0.040000"
+#M02s=" 0.0  "
+M02s=" -0.040000  "
 #M02s=" -0.024604  "
 #M02s="-0.029604 "
 #M02s="-1.2 -1.0"
 
 #mu03s="0.0120 0.0224"
-mu03s="0.0"
-#mu03s="0.0224"
+#mu03s="0.0"
+mu03s="0.0224"
 #mu03s="0.0120"
 
 system="A3"
 #rho="1"
 #rho="1.008742"
-#rho="1.96"
-rho="0.98"
+rho="1.96"
+#rho="0.98"
 #rho="1.007170"
 csws="1.0"
 
 here=`pwd`
 cd ..
-#array=(019:220 020:540 021:860 022:1180 023:1500 024:1820 025:2140 026:2460 027:2780 028:3100 029:3420 030:3740 031:4060 032:4380 033:4700 034:5020 035:5340 036:5660 037:5980 038:6300 039:6620 040:6940 041:7260 042:7580 043:7900 044:8220 045:8540 046:8860 047:9180 048:9500 049:9820 050:10140 051:10460 052:10780 053:11100 054:11420 055:11740 056:12060 057:12380 058:12700 059:13020 060:13340 061:13660 062:13980 063:14300 064:14620 065:14940 066:15260 067:15580 068:15900 069:16220 070:16540 071:16860 072:17180 073:17500 074:17820 075:18140 076:18460 077:18780 078:19100)
+array=(019:220 020:540 021:860 022:1180 023:1500 024:1820 025:2140 026:2460 027:2780 028:3100 029:3420 030:3740 031:4060 032:4380 033:4700 034:5020 035:5340 036:5660 037:5980 038:6300 039:6620 040:6940 041:7260 042:7580 043:7900 044:8220 045:8540 046:8860 047:9180 048:9500 049:9820 050:10140 051:10460 052:10780 053:11100 054:11420 055:11740 056:12060 057:12380 058:12700 059:13020 060:13340 061:13660 062:13980 063:14300 064:14620 065:14940 066:15260 067:15580 068:15900 069:16220 070:16540 071:16860 072:17180 073:17500 074:17820 075:18140 076:18460 077:18780 078:19100)
 #conf.0000 is a trivial gauge
-array=(000:220 000:540 000:860)
-array=(000:540 000:860)
-array=(000:1180 000:1500 000:1820 000:2140 000:2460 000:2780 000:3100 000:3420 000:3740 000:4060 000:4380 000:4700)
-#array=(000:5020 000:5340 000:5660 000:5980 000:6300 000:6620 000:6940 000:7260 000:7580 000:7900 000:8220 000:8540 000:8860 000:9180 000:9500 000:9820 000:10140 000:10460 000:10780 000:11100 000:11420 000:11740 000:12060 000:12380 000:12700 000:13020 000:13340 000:13660 000:13980 000:14300 000:14620 000:14940 000:15260 000:15580 000:15900 000:16220 000:16540 000:16860 000:17180 000:17500 000:17820 000:18140 000:18460 000:18780 000:19100)
+#array=(000:220 000:540 000:860)
+#array+=(000:1180 000:1500 000:1820 000:2140 000:2460 000:2780 000:3100 000:3420 000:3740 000:4060 000:4380 000:4700)
+#array=(000:220 000:540 000:860 000:1180 000:1500 000:1820 000:2140 000:2460 000:2780 000:3100 000:3420 000:3740 000:4060 000:4380 000:4700 000:5020 000:5340 000:5660 000:5980 000:6300 000:6620 000:6940 000:7260 000:7580 000:7900 000:8220 000:8540 000:8860 000:9180 000:9500 000:9820 000:10140 000:10460 000:10780 000:11100 000:11420 000:11740 000:12060 000:12380 000:12700 000:13020 000:13340 000:13660 000:13980 000:14300 000:14620 000:14940 000:15260 000:15580 000:15900 000:16220 000:16540 000:16860 000:17180 000:17500 000:17820 000:18140 000:18460 000:18780 000:19100)
 #
 #identity scalar
 #array=(000:0)
 # identity *0.1 scalar
 #array=(000:1)
 # identity *0.2 scalar
-array=(000:2)
+#array=(000:2)
 # identity *0.05 scalar
 #array=(000:3)
 
@@ -52,13 +53,13 @@ array=(000:2)
 lenght_array=${#array[@]}
 lenght_array=$(( lenght_array-1))
 
-ScalarsXoneGauge=1
+ScalarsXoneGauge=8
 #ScalarsXoneGauge=1
 if [ $system = A2 ]
 then 
 nruns=4
 else
-nruns=1
+nruns=4
 fi
 npergauge=$(( $ScalarsXoneGauge/$nruns   ))
 distance_scalars=40
@@ -81,8 +82,9 @@ mu03_decimal=`echo ${mu03:2}`
 
 echo $eta $M02 $mu03 $etam $M02_decimal 
 
-new_folder="eta_"$etam"_M02_"$M02"_mu03_"$mu03"_csw_"$csw"_rho"$rho"_trivialU_trivialphi0.2"
+#new_folder="eta_"$etam"_M02_"$M02"_mu03_"$mu03"_csw_"$csw"_rho"$rho"_trivialU_trivialphi"
 #new_folder="eta_"$etam"_M02_"$M02"_mu03_"$mu03"_csw_"$csw"_rho"$rho"_trivialU"
+new_folder="eta_"$etam"_M02_"$M02"_mu03_"$mu03"_csw_"$csw"_rho"$rho""
 #new_folder="eta_"$etam"_M02_"$M02_decimal"_mu03_"$mu03_decimal"_rho"$rho"_lex"
 current_folder=`pwd`
 #current_folder="${current_folder/bsmscripts/}"
@@ -270,7 +272,9 @@ else
 	#echo "#SBATCH --partition=skl_usr_prod " >> $new_folder/job.templ
 	#echo "#SBATCH --account=INF21_lqcd123" >> $new_folder/job.templ
 	echo "#SBATCH -N4 -n128 --mem=32000 " >> $new_folder/job.templ            
-	echo "#SBATCH --time=06:00:00       " >> $new_folder/job.templ
+	echo "#SBATCH --time=16:00:00       " >> $new_folder/job.templ
+	#echo "#SBATCH -N1 -n2 --mem=32000 " >> $new_folder/job.templ            
+	#echo "#SBATCH --time=01:00:00       " >> $new_folder/job.templ
 fi
 
 #echo "#SBATCH --output job.out " >> $new_folder/job.templ
@@ -282,13 +286,13 @@ echo "efile=/home/mgarofalo/tmLQCD/build/contractions_BSM" >> $new_folder/job.te
 echo >> $new_folder/job.templ
 
 
-echo "source /p/home/jusers/garofalo1/jureca/tmLQCD/build/load_modules.sh" >> $new_folder/job.templ
+#echo "source /p/home/jusers/garofalo1/jureca/tmLQCD/build/load_modules.sh" >> $new_folder/job.templ
 #echo ". /p/home/jusers/kostrzewa2/jureca/build/jurecabooster/stage-2018a/knl-avx512/intel_mpi_2018-intel_2018/load_modules.sh" >> $new_folder/job.templ
 #echo "module load intel intelmpi mkl" >> $new_folder/job.templ
 echo >> $new_folder/job.templ
 echo >> $new_folder/job.templ
 
-echo "cd $current_folder/$new_folder" >> $new_folder/job.templ
+#echo "cd $current_folder/$new_folder" >> $new_folder/job.templ
 echo >> $new_folder/job.templ
 echo >> $new_folder/job.templ
 
@@ -360,6 +364,8 @@ echo "" >>$new_folder/contractions.templ
 
 echo "BeginOperator BSM3" >>$new_folder/contractions.templ
 echo "  propagatorsonthefly = yes" >>$new_folder/contractions.templ
+#echo "  propagatorsonthefly = no" >>$new_folder/contractions.templ
+
 echo "  vectordensitydensity = yes" >>$new_folder/contractions.templ
 echo "  vectorcurrentdensity = yes" >> $new_folder/contractions.templ
 echo "  pdensityvectordensity = yes" >> $new_folder/contractions.templ
