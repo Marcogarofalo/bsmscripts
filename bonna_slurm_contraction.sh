@@ -349,6 +349,7 @@ echo "bcanglet = 1" >>$new_folder/contractions.templ
 echo "" >>$new_folder/contractions.templ
 
 echo "gaugeconfiginputfile = conf" >>$new_folder/contractions.templ
+echo "SmearedGaugeConfigInputFile = conf_smeared" >>$new_folder/contractions.templ
 echo "scalarconfiginputfile = scalar" >>$new_folder/contractions.templ
 echo "" >>$new_folder/contractions.templ
 
@@ -365,6 +366,8 @@ echo "" >>$new_folder/contractions.templ
 echo "BeginOperator BSM3" >>$new_folder/contractions.templ
 echo "  propagatorsonthefly = yes" >>$new_folder/contractions.templ
 #echo "  propagatorsonthefly = no" >>$new_folder/contractions.templ
+echo "  localcurrentdensity = yes" >>$new_folder/contractions.templ
+
 
 echo "  vectordensitydensity = yes" >>$new_folder/contractions.templ
 echo "  vectorcurrentdensity = yes" >> $new_folder/contractions.templ
